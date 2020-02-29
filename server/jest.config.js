@@ -1,7 +1,11 @@
 module.exports = {
+  moduleNameMapper: {
+    '^common$': '<rootDir>/../common',
+  },
+  moduleDirectories: ['node_modules', '<rootDir>/../node_modules'],
   testEnvironment: 'node',
   transform: {
-    '^.+\\.tsx?$': '<rootDir>/../node_modules/ts-jest/preprocessor.js',
+    '^.+\\.tsx?$': 'ts-jest',
   },
   testRegex: '(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$',
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json'],
